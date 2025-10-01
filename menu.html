@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/menu.css">
+    
+    <title>LE BLANC MENU</title>
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+
+  </head>
+  <body>
+
+    <header class="lb-header" role="banner">
+    <nav class="lb-nav" aria-label="Primary">
+      <button class="lb-nav__toggle" aria-label="메뉴" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="lb-nav__list">
+        <li class="is-active">
+          <a href="#hero" data-target="hero"><span class="lb-nav__label">Home</span></a>
+        </li>
+        <li>
+          <a href="#experience" data-target="experience"><span class="lb-nav__label">Atelier</span></a>
+        </li>
+        <li>
+          <a href="#story" data-target="story"><span class="lb-nav__label">Magazine</span></a>
+        </li>
+        <li>
+          <a href="#" ><span class="lb-nav__label">About</span></a>
+        </li>
+
+        <li class="brand" aria-hidden="true"><span class="brand-text" data-hover="Delicious Bread">LE BLANC</span></li>
+
+        <li>
+          <a href="./menu.html"><span class="lb-nav__label">Menu</span></a>
+        </li>
+        <li>
+          <a href="#vm2" data-target="video"><span class="lb-nav__label">Order Online</span></a>
+        </li>
+        <li>
+          <a href="./contact.html" ><span class="lb-nav__label">Contact</span></a>
+        </li>
+
+        
+        <span class="lb-nav__indicator" aria-hidden="true"></span>
+      </ul>
+    </nav>
+  </header>
+
+
+    <main class="stage" id="stage">
+      <section class="sticky" id="pin-root">
+        <!-- Centered Headline (white text, bg fills per panel color) -->
+        <div class="headline-wrap" aria-hidden="true">
+          <h1 class="headline">Le Blanc</h1>
+        </div>
+
+        <!-- Fast ring draw at the very beginning -->
+        <div class="ring-wrap">
+          <svg id="ring" viewBox="0 0 400 400" aria-hidden="true">
+            <circle cx="200" cy="200" r="170"></circle>
+          </svg>
+        </div>
+
+        <!-- Image stack -->
+        <div class="stack">
+          <div class="stack-inner" id="stack">
+            
+            <article class="panel" data-i="0" data-color="#F5B800">
+              <img
+                src="./img/mina_big_01.png"
+                alt="Bread & table"
+              />
+              <div class="caption">Pancake</div>
+            </article>
+
+            <article class="panel" data-i="1" data-color="#3AC2FF">
+              <img
+                src="./img/mina_big_02.png"
+                alt="Blue tone"
+              />
+              <div class="caption">Bagel</div>
+            </article>
+
+            <article class="panel" data-i="2" data-color="#E84A5F">
+              <img
+                src="./img/mina_big_03.png"
+                alt="Warm red"
+              />
+              <div class="caption">Baguette</div>
+            </article>
+
+            <article class="panel" data-i="3" data-color="#7BE495">
+              <img
+                src="./img/mina_big_04.png"
+                alt="Green vibe"
+              />
+              <div class="caption">White Bread</div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 4*2 section -->
+      <div class="product-section-wrapper">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./img/Baguette.jpg" alt="상품 이미지 1">
+                <div class="product-info">
+                    <h3 class="product-title">Baguette</h3>
+                    <p class="product-description">
+                        프랑스를 대표하는 길고 바삭한 빵, 담백한 맛과 쫄깃한 식감이 매력입니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Bagel.jpg" alt="상품 이미지 2">
+                <div class="product-info">
+                    <h3 class="product-title">Bagel</h3>
+                    <p class="product-description">
+                        끓는 물에 한 번 삶아 쫄깃함이 살아있는 빵, 담백하면서 다양한 토핑과 잘 어울립니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Ciabatta.jpg" alt="상품 이미지 3">
+                <div class="product-info">
+                    <h3 class="product-title">Ciabatta</h3>
+                    <p class="product-description">올리브 오일 풍미가 담긴 이탈리아 빵, 겉은 바삭하고 속은 촉촉한 맛이 특징입니다.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Focaccia.jpg" alt="상품 이미지 4">
+                <div class="product-info">
+                    <h3 class="product-title">Focaccia</h3>
+                    <p class="product-description">허브와 올리브 오일 향이 가득한 이탈리아식 평평한 빵, 샐러드나 파스타와 환상궁합입니다.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Scone.jpg" alt="상품 이미지 5">
+                <div class="product-info">
+                    <h3 class="product-title">Scone</h3>
+                    <p class="product-description">영국 티타임의 정석, 담백하면서도 고소한 맛으로 잼이나 클로티드 크림과 최고의 조화를 이룹니다.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Pretzel.jpg" alt="상품 이미지 6">
+                <div class="product-info">
+                    <h3 class="product-title">Pretzel</h3>
+                    <p class="product-description">독일을 대표하는 매듭 모양의 빵, 특유의 짭조름함과 쫄깃한 식감으로 사랑받습니다.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Croissant.jpg" alt="상품 이미지 7">
+                <div class="product-info">
+                    <h3 class="product-title">Croissant</h3>
+                    <p class="product-description">겹겹이 쌓인 버터 향 가득한 결이 살아있는 빵, 아침을 특별하게 만들어줍니다.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./img/Naan.jpg" alt="상품 이미지 8">
+                <div class="product-info">
+                    <h3 class="product-title">Naan</h3>
+                    <p class="product-description">인도의 전통 빵, 화덕에서 구워내 따뜻하고 부드러운 맛이 매력입니다.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!------------------- ===== Video ===== ------------------------>
+   
+<section class="vm">
+  <div class="vm-sticky">
+    <!-- 배경 비디오 -->
+    <video class="vm-video" autoplay muted loop playsinline>
+      <source src="./img/20250916_1215_Culinary Artistry in Action_simple_compose_01k5889r14fsv9jptyfkr47k3r.mp4" type="video/mp4" />
+    </video>
+
+    <!-- 커버 + 텍스트 마스크 + TRUST 밑줄 (모두 한 장의 SVG로) -->
+    <svg class="vm-svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <!-- 흰 = 보임, 검정 = 뚫림(=텍스트 구멍) -->
+        <mask id="vmTextMask" maskUnits="userSpaceOnUse">
+          <rect width="1200" height="630" fill="white"/>
+          <!-- 문구 -->
+          <g fill="black" font-family="Anton, 'Archivo Black', system-ui" font-weight="900" letter-spacing="3">
+            <!-- 상단 문구(작게) -->
+            <text x="50%" y="28%" text-anchor="middle" font-size="90">
+             LE BLANC
+            </text>
+            <text x="50%" y="44%" text-anchor="middle" font-size="90">
+             Has been Best
+            </text>
+            <!-- TRUST(크게) -->
+            <text id="trustWord" x="50%" y="62%" text-anchor="middle" font-size="90">
+              Since 2020
+            </text>
+          </g>
+        </mask>
+      </defs>
+
+      <!-- 크림 커버(마스크 적용) : 이 레이어가 스크롤에 따라 위로 올라가며 사라짐 -->
+      <g class="vm-curtain">
+        <rect width="1200" height="630" fill="#faf4ea" mask="url(#vmTextMask)"/>
+        <!-- 내부 그림자 느낌 살짝 (선택) -->
+        <rect width="1200" height="630" fill="transparent"
+              style="mix-blend-mode:multiply; filter: drop-shadow(0 0 60px rgba(208,198,176,.55));"/>
+        <!-- TRUST 밑줄: TRUST 아래에 고정되도록 좌표 맞춤 -->
+        <g fill="none" stroke="#f0b400" stroke-linecap="round" stroke-linejoin="round">
+          <!-- y값은 TRUST의 y(=54%) 기준 아래쪽으로 살짝 -->
+          <path d="M180,420 C420,460 780,360 1040,410" stroke-width="22"/>
+          <path d="M182,424 C420,466 780,364 1020,414" stroke-width="16" opacity=".55"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- footer -->
+
+<footer class="lb-footer footer--sub" role="contentinfo" aria-label="페이지 하단">
+  <div class="lb-footer__inner">
+    <!-- 1) 브랜드 -->
+    <div class="lb-footer__brand">
+      <a href="/" class="brand" aria-label="LE BLANC 홈으로">
+        <span class="brand-mark" aria-hidden="true">🟡</span>
+        <span class="brand-word">
+          <strong>LE BLANC</strong>
+          <em class="tagline">We sell the Trust</em>
+        </span>
+      </a>
+      <p class="muted">Artisanal Bakery &amp; Café in Seoul</p>
+
+      <div class="lb-footer__social" aria-label="소셜 링크">
+        <a class="icon" href="#" aria-label="Instagram">
+          <!-- Instagram -->
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 15.8 2.8 2.8 0 0 0 12 9.2zm5.6-.9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </a>
+        <a class="icon" href="#" aria-label="Facebook">
+          <!-- Facebook -->
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.1 5.66 21.24 10.44 22v-7.01H7.9v-2.92h2.54V9.84c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.92h-2.34V22C18.34 21.24 22 17.1 22 12.07z"/>
+          </svg>
+        </a>
+        <a class="icon" href="#" aria-label="YouTube">
+          <!-- YouTube -->
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .6 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.3.6 9.3.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.6-3.8.6-5.8 0-2-.2-3.9-.6-5.8zM9.6 15.5v-7l6.1 3.5-6.1 3.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2) 퀵 링크 -->
+    <nav class="lb-footer__nav" aria-label="푸터 메뉴">
+      <h3>Quick Links</h3>
+      <ul class="linklist">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/menu.html">Menu</a></li>
+        <li><a href="/atelier.html">Atelier</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <!-- 3) 매장 정보 -->
+    <div class="lb-footer__info">
+      <h3>Store</h3>
+      <address>
+        서울 ○○구 ○○로 123, 1F<br>
+        Tel. <a href="tel:021234567">02-123-4567</a><br>
+        Mail. <a href="mailto:hello@leblanc.co.kr">hello@leblanc.co.kr</a>
+      </address>
+      <p class="hours"><strong>Hours</strong> · Mon–Sat 09:00–20:00 · Sun Off</p>
+      <p class="maplink">
+        <a href="https://www.google.com/maps?q=37.5665,126.9780&hl=ko&z=16" target="_blank" rel="noopener">Google 지도 열기</a>
+      </p>
+    </div>
+
+    <!-- 4) 구독(선택) -->
+    <div class="lb-footer__news">
+      <h3>Newsletter</h3>
+      <form class="mini-form" action="#" method="post" novalidate>
+        <label for="subs-email" class="sr-only">이메일</label>
+        <input id="subs-email" type="email" placeholder="you@example.com" required>
+        <button type="submit">구독</button>
+      </form>
+      <p class="muted tiny">신제품, 이벤트 정보를 보내드려요.</p>
+    </div>
+  </div>
+
+  <div class="lb-footer__bottom" role="navigation" aria-label="정책 링크">
+    <p class="copy">© <span id="year"></span> LE BLANC. All rights reserved.</p>
+    <ul class="policies">
+      <li><a href="/privacy.html">개인정보 처리방침</a></li>
+      <li><a href="/terms.html">이용약관</a></li>
+      <li><a href="/sitemap.html">사이트맵</a></li>
+    </ul>
+    <a class="gotop" href="#top" aria-label="맨 위로">↑ Top</a>
+  </div>
+</footer>
+
+
+
+    <script>
+
+//      =========================
+  //  NAV: Indicator + ScrollSpy
+  //  ========================= */
+(function(){
+  const INDICATOR_EXTRA = 6;
+  const INDICATOR_HEIGHT = 3;
+  const IO_THRESHOLD = 0.01;
+  const IO_TOP_OFFSET = 8;
+
+  const header = document.querySelector('.lb-header');
+  const nav = document.querySelector('.lb-nav');
+  const list = nav?.querySelector('.lb-nav__list');
+  const indicator = list?.querySelector('.lb-nav__indicator');
+  const toggle = nav?.querySelector('.lb-nav__toggle');
+  if (!header || !list || !indicator) return;
+
+  const itemLis = Array.from(list.children).filter(li => li.matches('li') && !li.classList.contains('brand'));
+  const navItems = itemLis
+    .map(li => {
+      const anchor = li.querySelector('a');
+      if (!anchor) return null;
+      return {
+        li,
+        anchor,
+        targetId: anchor.dataset.target || null
+      };
+    })
+    .filter(Boolean);
+  const scrollItems = navItems.filter(item => item.targetId);
+  const getStickyOffset = () => (header?.offsetHeight || 56);
+
+  function computeBox(anchor){
+    const label = anchor.querySelector('.lb-nav__label') || anchor;
+    const labelRect = label.getBoundingClientRect();
+    const listRect  = list.getBoundingClientRect();
+    const width = Math.round(labelRect.width + INDICATOR_EXTRA);
+    const centerX = labelRect.left - listRect.left + (labelRect.width / 2);
+    const leftRaw = centerX - (width / 2);
+    const left = Math.max(0, Math.min(leftRaw, list.clientWidth - width));
+    return { left, width };
+  }
+  function moveIndicatorTo(anchor){
+    if(!anchor) return;
+    const {left, width} = computeBox(anchor);
+    indicator.style.transform = `translateX(${Math.round(left)}px)`;
+    indicator.style.width = Math.round(width) + 'px';
+    indicator.style.height = INDICATOR_HEIGHT + 'px';
+  }
+  function setActiveItem(item){
+    if (!item) return;
+    navItems.forEach(({li}) => li.classList.remove('is-active'));
+    item.li.classList.add('is-active');
+    moveIndicatorTo(item.anchor);
+  }
+  function setActiveByLi(li){
+    const item = navItems.find(entry => entry.li === li);
+    if (item) setActiveItem(item);
+  }
+  function setActiveById(id){
+    const item = scrollItems.find(entry => entry.targetId === id);
+    if (item) setActiveItem(item);
+  }
+  function getActiveAnchor(){
+    return list.querySelector('li.is-active a') || navItems[0]?.anchor || null;
+  }
+  function initActive(){
+    const presetAnchor = list.querySelector('li.is-active a');
+    const preset = navItems.find(item => item.anchor === presetAnchor);
+    setActiveItem(preset || navItems[0]);
+  }
+
+  // mobile toggle
+  function closeMobile(){
+    if (list.classList.contains('show')){
+      list.classList.remove('show');
+      toggle?.setAttribute('aria-expanded','false');
+      toggle?.classList?.remove('is-open');
+      nav?.classList?.remove('is-open');
+    }
+  }
+  toggle?.addEventListener('click', ()=>{
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    list.classList.toggle('show', !expanded);
+    toggle?.classList?.toggle('is-open', !expanded);
+    nav?.classList?.toggle('is-open', !expanded);
+  });
+  document.addEventListener('click', (e)=>{ if (!list.classList.contains('show')) return; if (!e.target.closest('.lb-nav')) closeMobile(); });
+  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeMobile(); });
+
+  // smooth scroll
+  function smoothScrollTo(id){
+    const el = document.getElementById(id);
+    if(!el) return;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - getStickyOffset() + 1;
+    window.scrollTo({ top, behavior:'smooth' });
+  }
+  list.addEventListener('click', (e)=>{
+    const anchor = e.target.closest('a');
+    if(!anchor || !list.contains(anchor)) return;
+    const item = navItems.find(entry => entry.anchor === anchor);
+    if(!item) return;
+    setActiveItem(item);
+    if (item.targetId){
+      e.preventDefault();
+      smoothScrollTo(item.targetId);
+    } else if (anchor.getAttribute('href') === '#'){
+      e.preventDefault();
+    }
+    closeMobile();
+  });
+
+  // hover
+  navItems.forEach(({li, anchor})=>{
+    li.addEventListener('mouseenter', ()=> moveIndicatorTo(anchor));
+    li.addEventListener('focusin',   ()=> moveIndicatorTo(anchor));
+    li.addEventListener('mouseleave', ()=>{
+      moveIndicatorTo(getActiveAnchor());
+    });
+  });
+
+  // scrollspy
+  const sections = scrollItems.map(item => document.getElementById(item.targetId)).filter(Boolean);
+  let io;
+  function mountIO(){
+    const marginTop = getStickyOffset() + IO_TOP_OFFSET;
+    if (io) io.disconnect();
+    if (!sections.length) return;
+    io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{ if(entry.isIntersecting) setActiveById(entry.target.id); });
+    },{ root:null, rootMargin:`-${marginTop}px 0px -60% 0px`, threshold:IO_THRESHOLD });
+    sections.forEach(sec => io.observe(sec));
+  }
+
+  function initAll(){
+    initActive(); mountIO();
+    requestAnimationFrame(()=>{
+      moveIndicatorTo(getActiveAnchor());
+    });
+  }
+  window.addEventListener('load', ()=>{ (document.fonts?.ready || Promise.resolve()).then(initAll).catch(initAll); });
+})();
+
+
+window.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const pinRoot = document.getElementById("pin-root");
+    const ringCircle = document.querySelector("#ring circle");
+    const panels = gsap.utils.toArray(".panel");
+
+    document.documentElement.style.setProperty("--ink", "#ffffff");
+
+    const circleLen = 1000;
+    gsap.set(ringCircle, {
+      strokeDasharray: circleLen,
+      strokeDashoffset: circleLen,
+    });
+
+    // 📌 화면 폭에 따라 end 값 구하는 함수
+    function getPinEnd() {
+      return window.matchMedia("(max-width:600px)").matches ? "+=300%" : "+=450%";
+    }
+
+    // 📌 타임라인 생성
+    const tl = gsap.timeline({
+      defaults: { ease: "none" },
+      scrollTrigger: {
+        trigger: pinRoot,
+        start: "top top",
+        end: getPinEnd(),
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        pinSpacing: false,
+      },
+    });
+
+    // === ring draw ===
+    tl.to(ringCircle, { strokeDashoffset: 0 }, 0).to({}, { duration: 0.15 });
+
+    // === panels ===
+    const perPanel = 0.2;
+    panels.forEach((panel, i) => {
+      const color = panel.getAttribute("data-color") || "#ffffff";
+      const pos = 0.15 + i * perPanel;
+
+      tl.call(() => {
+        document.documentElement.style.setProperty("--ink", color);
+      }, null, pos + 0.02);
+
+      tl.to(
+        panel,
+        {
+          yPercent: -105,
+          scale: 1.02,
+          filter: "contrast(1.05) brightness(1.02)",
+          duration: perPanel,
+        },
+        pos
+      );
+
+      if (i === panels.length - 1) {
+        tl.to(
+          panel,
+          {
+            yPercent: -160,
+            opacity: 0,
+            filter: "blur(4px) brightness(0.9)",
+          },
+          pos + perPanel - 0.08
+        );
+      }
+    });
+
+    tl.call(() => {
+      document.documentElement.style.setProperty("--ink", "#ffffff");
+    }, null, 0.96);
+
+    tl.to(
+      [".ring-wrap", ".headline-wrap"],
+      { autoAlpha: 0, duration: 0.12 },
+      0.97
+    );
+
+    // 📌 리사이즈 시 end 값 다시 계산
+    window.addEventListener("resize", () => {
+      tl.scrollTrigger.end = getPinEnd();
+      ScrollTrigger.refresh();
+    });
+
+    ScrollTrigger.refresh();
+  });
+
+  // 연도 자동 업데이트
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ===============================
+   Video Mask Scroll Interaction
+   =============================== */
+
+  (function(){
+    const section = document.querySelector('.vm');
+    const root    = document.documentElement;
+
+    function setProgress(){
+      const rect = section.getBoundingClientRect();
+      const vh   = window.innerHeight;
+
+      // 이 섹션 내부에서 스크롤된 비율(0~1)
+      const total = rect.height - vh;                  // 진행 가능한 총 거리
+      const scrolled = Math.min(Math.max(-rect.top, 0), total); // 0~total
+      const p = total > 0 ? (scrolled / total) : 0;
+
+      root.style.setProperty('--vmp', p.toFixed(4));
+    }
+
+    // 최초/스크롤/리사이즈에서 갱신
+    setProgress();
+    addEventListener('scroll', setProgress, { passive: true });
+    addEventListener('resize', setProgress);
+  })();
+    </script>
+  </body>
+</html>
+
